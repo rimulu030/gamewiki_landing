@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* v4: 让诸如 bg-primary / text-muted-foreground 真正“长出来” */
+@theme {
+  --color-background: hsl(240 10% 3.9%);
+  --color-foreground: hsl(0 0% 98%);
+
+  --color-card: hsl(240 10% 3.9%);
+  --color-card-foreground: hsl(0 0% 98%);
+
+  --color-popover: hsl(240 10% 3.9%);
+  --color-popover-foreground: hsl(0 0% 98%);
+
+  --color-primary: hsl(240 5.9% 10%);
+  --color-primary-foreground: hsl(0 0% 98%);
+
+  --color-secondary: hsl(240 4.8% 15.9%);
+  --color-secondary-foreground: hsl(0 0% 98%);
+
+  --color-muted: hsl(240 4.8% 15.9%);
+  --color-muted-foreground: hsl(240 5% 64.9%);
+
+  --color-accent: hsl(240 4.8% 15.9%);
+  --color-accent-foreground: hsl(0 0% 98%);
+
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  --color-border: hsl(240 3.7% 15.9%);
+  --color-input: hsl(240 3.7% 15.9%);
+  --color-ring: hsl(240 4.9% 83.9%);
+
+  /* 需要的话也可以在这设置断点/半径等 tokens：
+     --breakpoint-3xl: 120rem;   → 可用 3xl: 前缀
+     --radius-xl: 0.75rem;       → 可用 rounded-xl
+  */
+}
+
+
+@layer base {
+  :root {
+    /* 定义颜色变量，方便统一管理 */
+    --background: 240 10% 3.9%; /* hsl(240, 10%, 3.9%) -> #09090b */
+    --foreground: 0 0% 98%;     /* hsl(0, 0%, 98%) -> #fafafa */
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262.1 83.3% 57.8%; /* 主色调，用于关键按钮和链接 */
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%; /* 用于次要文本，提高对比度 */
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 262.1 83.3% 57.8%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* 抗锯齿，让字体更平滑 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 添加一个微妙的背景网格效果 */
+html {
+  scroll-behavior: smooth;
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(
+      circle at 25px 25px,
+      hsl(var(--border)) 2%,
+      transparent 0%
+    ),
+    radial-gradient(circle at 75px 75px, hsl(var(--border)) 2%, transparent 0%);
+  background-size: 100px 100px;
+}
