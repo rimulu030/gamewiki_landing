@@ -87,21 +87,38 @@ export default function Home() {
             </a>
           </div>
           {/* Demo 视频 */}
-          <div className="mt-8 md:mt-10 w-full max-w-4xl rounded-2xl overflow-hidden border-2 border-border bg-secondary shadow-2xl shadow-primary/10">
-            {/* 建议使用 <video> 替换 <img> 以获得更好的性能和体验 */}
-            <video
-              src="/demo1.mp4"
-              autoPlay muted loop playsInline
-              className="w-full h-auto"
-            />
+          <div className="mt-8 md:mt-10 w-full max-w-4xl">
+            <div className="rounded-2xl overflow-hidden border-2 border-border bg-secondary shadow-2xl shadow-primary/10">
+              {/* 建议使用 <video> 替换 <img> 以获得更好的性能和体验 */}
+              <video
+                src="/demo1.mp4"
+                autoPlay muted loop playsInline
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-xl text-muted-foreground mt-3">Use as AI assistant</p>
           </div>
-          <div className="mt-6 md:mt-8 w-full max-w-4xl rounded-2xl overflow-hidden border-2 border-border bg-secondary shadow-2xl shadow-primary/10">
-            {/* 建议使用 <video> 替换 <img> 以获得更好的性能和体验 */}
-            <video
-              src="/demo2.mp4"
-              autoPlay muted loop playsInline
-              className="w-full h-auto"
-            />
+          <div className="mt-8 md:mt-10 w-full max-w-4xl">
+            <div className="rounded-2xl overflow-hidden border-2 border-border bg-secondary shadow-2xl shadow-primary/10">
+              {/* 建议使用 <video> 替换 <img> 以获得更好的性能和体验 */}
+              <video
+                src="/demo3.mp4"
+                autoPlay muted loop playsInline
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-xl text-muted-foreground mt-3">Quick access to Wikis</p>
+          </div>
+          <div className="mt-6 md:mt-8 w-full max-w-4xl">
+            <div className="rounded-2xl overflow-hidden border-2 border-border bg-secondary shadow-2xl shadow-primary/10">
+              {/* 建议使用 <video> 替换 <img> 以获得更好的性能和体验 */}
+              <video
+                src="/demo2.mp4"
+                autoPlay muted loop playsInline
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-xl text-muted-foreground mt-3">Quick access to webs</p>
           </div>
         </div>
       </section>
