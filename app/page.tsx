@@ -70,7 +70,7 @@ export default function Home() {
           {/* Join Discord（放在 CTA 按钮下面） */}
           <div className="mt-3">
             <a
-              href="https://discord.gg/your-invite-code"  // TODO: 换成你的邀请链接
+              href="https://discord.gg/WdZVcnQ2"  // TODO: 换成你的邀请链接
               target="_blank"
               rel="noreferrer"
               aria-label="Join our Discord"
