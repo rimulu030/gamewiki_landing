@@ -1,6 +1,7 @@
 import Link from "next/link";
 // 引入图标
-import { Download, Github, BookText, ArrowRight } from "lucide-react";
+import { Download, Github, BookText, ArrowRight, Mail } from "lucide-react";
+import NewsletterForm from "./components/NewsletterForm";
 
 // 功能特性列表，这次我们为每个特性加上了图标
 const features = [
@@ -157,6 +158,30 @@ export default function Home() {
             >
               Go to the Repo <ArrowRight className="w-5 h-5" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="w-full max-w-5xl pb-24 sm:pb-32 pt-2 md:pt-3">
+        <div className="rounded-2xl border border-border p-6 md:p-8 bg-gradient-to-br from-secondary to-secondary/50 relative overflow-hidden">
+          <div className="absolute -right-10 -top-10 w-40 h-40 bg-cyan-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-emerald-400/10 rounded-full blur-3xl"></div>
+          <div className="mx-4 md:mx-8 flex flex-col gap-4">
+            {/* 第一行：标题和描述 */}
+            <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-8">
+              <div className="flex items-center gap-3 ml-4 md:ml-8">
+                <Mail className="w-6 h-6 text-white/70" />
+                <h4 className="text-xl font-bold">Stay Updated</h4>
+              </div>
+              <p className="text-muted-foreground text-sm flex-1">
+                Get notified about new features and updates. No spam, unsubscribe anytime.
+              </p>
+            </div>
+            {/* 第二行：表单，与图标对齐 */}
+            <div className="ml-9 md:ml-9">
+              <NewsletterForm />
+            </div>
           </div>
         </div>
       </section>
