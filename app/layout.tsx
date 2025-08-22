@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // 引入 Inter 字体
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 // 配置 Inter 字体
 const inter = Inter({
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${inter.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
