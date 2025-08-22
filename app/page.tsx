@@ -40,7 +40,7 @@ export default function Home() {
           {/* 按钮组 */}
           <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
             <Link
-              href="https://github.com/rimulu030/gamewiki/releases/download/v1.0.0/GameWikiAssistant_Portable_onedir.zip"
+              href="https://github.com/rimulu030/gamewiki/releases/download/v1.0.0/GameWikiAssistant.zip"
               className="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 bg-primary text-primary-foreground font-semibold shadow-lg hover:bg-primary/90 transition-all duration-200"
               target="_blank"
               rel="noreferrer"
